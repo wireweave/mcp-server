@@ -1,0 +1,35 @@
+{
+  "name": "@wireweave/mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Wireweave DSL - Thin client for API Server",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "wireweave-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "wireweave",
+    "mcp",
+    "wireframe",
+    "dsl"
+  ],
+  "license": "MIT"
+}

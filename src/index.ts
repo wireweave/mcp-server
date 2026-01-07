@@ -8,8 +8,14 @@ import {
 } from '@modelcontextprotocol/sdk/types.js';
 
 // API Server URL
-const API_URL = process.env.WIREWEAVE_API_URL || 'https://api.wireweave.dev';
+const API_URL = process.env.WIREWEAVE_API_URL || 'https://api.wireweave.org';
 const API_KEY = process.env.WIREWEAVE_API_KEY;
+
+// Logging utility - sanitize sensitive info
+function log(message: string, level: 'info' | 'warn' | 'error' = 'info') {
+  const prefix = level === 'error' ? '❌' : level === 'warn' ? '⚠️' : '✓';
+  console.error(`[Wireweave] ${prefix} ${message}`);
+}
 
 // Tool definitions
 const tools = [
@@ -143,8 +149,14 @@ async function callApi(
   const response = await fetch(url, options);
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ error: response.statusText }));
-    throw new Error(error.error || error.message || `API error: ${response.status}`);
+    const error = await response.json().catch(() => ({ error: 'Request failed' }));
+    // Sanitize error messages for users
+    const userMessage = response.status === 401 ? 'Invalid API key'
+      : response.status === 403 ? 'Access denied. Upgrade your plan for this feature.'
+      : response.status === 429 ? 'Rate limit exceeded. Please wait and try again.'
+      : response.status >= 500 ? 'Service temporarily unavailable'
+      : error.error || 'Request failed';
+    throw new Error(userMessage);
   }
 
   return response.json();
@@ -220,9 +232,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request): Promise<CallToo
   }
 });
 
-// Error handling
+// Error handling - sanitized
 server.onerror = (error) => {
-  console.error('[MCP Error]', error);
+  log('An error occurred', 'error');
 };
 
 process.on('SIGINT', async () => {
@@ -235,15 +247,14 @@ async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
 
-  console.error('Wireweave MCP server running on stdio');
-  console.error(`API URL: ${API_URL}`);
+  log('MCP server started');
 
   if (!API_KEY) {
-    console.error('WARNING: WIREWEAVE_API_KEY is not set. API calls will fail.');
+    log('API key not configured. Get one at https://dashboard.wireweave.org', 'warn');
   }
 }
 
-main().catch((error) => {
-  console.error('Failed to start server:', error);
+main().catch(() => {
+  log('Failed to start server', 'error');
   process.exit(1);
 });

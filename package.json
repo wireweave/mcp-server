@@ -25,11 +25,27 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wireweave/wireframe-lang.git",
+    "directory": "packages/mcp-server"
+  },
+  "homepage": "https://docs.wireweave.org",
+  "bugs": {
+    "url": "https://github.com/wireweave/wireframe-lang/issues"
+  },
   "keywords": [
     "wireweave",
     "mcp",
+    "model-context-protocol",
     "wireframe",
-    "dsl"
+    "dsl",
+    "ai",
+    "claude",
+    "llm",
+    "tools",
+    "ui-design",
+    "prototyping"
   ],
   "license": "MIT"
 }

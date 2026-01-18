@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.1-beta.0](https://github.com/wireweave/mcp-server/compare/v1.1.0...v1.1.1-beta.0) (2026-01-18)
+
+### Bug Fixes
+
+* **docs:** update logo image path ([ee2d1d1](https://github.com/wireweave/mcp-server/commit/ee2d1d15882a5e8c5cda8fbff1d0da4faaf1332c))
+
 ## [1.1.0](https://github.com/wireweave/mcp-server/compare/v1.1.0-beta.0...v1.1.0) (2026-01-18)
 
 ## 1.1.0-beta.0 (2026-01-18)

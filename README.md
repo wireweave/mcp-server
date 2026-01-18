@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/wireweave/wireframe-lang/main/assets/wireweave-mcp.svg" width="128" height="128" alt="Wireweave MCP">
+  <img src="https://raw.githubusercontent.com/wireweave/mcp-server/main/logo.svg" width="128" height="128" alt="Wireweave MCP">
 </p>
 
 <h1 align="center">@wireweave/mcp-server</h1>

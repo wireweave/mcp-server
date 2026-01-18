@@ -1,0 +1,18 @@
+# Changelog
+
+## 1.1.0-beta.0 (2026-01-18)
+
+### Features
+
+* apply sanitized logging policy ([c3b224e](https://github.com/wireweave/mcp-server/commit/c3b224ef9056f998c4660ca5ab5c43492b64d642))
+* **tools:** implement comprehensive tool suite ([97a123f](https://github.com/wireweave/mcp-server/commit/97a123fad75caa59805be8038a6fece965a8b841))
+
+### Refactoring
+
+* **mcp:** extract API and tools logic from index ([4741b23](https://github.com/wireweave/mcp-server/commit/4741b2392f690e309f826049705cc27ce32e0fbb))
+
+### Documentation
+
+* **readme:** enhance documentation with comprehensive tool listing ([1259b6c](https://github.com/wireweave/mcp-server/commit/1259b6c7d2d95dcb6a9a8d12f6839998a8216dc8))
+* **readme:** update logo path to remote URL ([27c67d2](https://github.com/wireweave/mcp-server/commit/27c67d24c6aeda72084b4b1289a0fd9caa7a1a2f))
+* **repo:** update repository URLs to standalone repo ([e2c3b42](https://github.com/wireweave/mcp-server/commit/e2c3b42fe4e059f0a7f14288dbf628ebf2391915))

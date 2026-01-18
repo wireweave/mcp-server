@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@wireweave/mcp-server"><img src="https://img.shields.io/npm/v/@wireweave/mcp-server.svg" alt="npm version"></a>
-  <a href="https://github.com/wireweave/wireframe-lang/blob/main/packages/mcp-server/LICENSE"><img src="https://img.shields.io/npm/l/@wireweave/mcp-server.svg" alt="license"></a>
+  <a href="https://github.com/wireweave/mcp-server/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@wireweave/mcp-server.svg" alt="license"></a>
 </p>
 
 <p align="center">Model Context Protocol server for Wireweave DSL - AI-powered wireframe generation</p>
@@ -160,7 +160,7 @@ All authentication, rate limiting, and business logic runs on the API Server.
 - [Documentation](https://docs.wireweave.org)
 - [Dashboard](https://dashboard.wireweave.org)
 - [Playground](https://playground.wireweave.org)
-- [GitHub](https://github.com/wireweave/wireframe-lang)
+- [GitHub](https://github.com/wireweave/mcp-server)
 
 ## License
 

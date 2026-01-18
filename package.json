@@ -31,12 +31,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wireweave/wireframe-lang.git",
-    "directory": "packages/mcp-server"
+    "url": "git+https://github.com/wireweave/mcp-server.git"
   },
   "homepage": "https://docs.wireweave.org",
   "bugs": {
-    "url": "https://github.com/wireweave/wireframe-lang/issues"
+    "url": "https://github.com/wireweave/mcp-server/issues"
   },
   "keywords": [
     "wireweave",

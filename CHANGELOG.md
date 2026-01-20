@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.3-beta.0](https://github.com/wireweave/mcp-server/compare/v1.1.2...v1.1.3-beta.0) (2026-01-20)
+
+### Refactoring
+
+* **mcp:** improve tool registration and logging ([a43a3df](https://github.com/wireweave/mcp-server/commit/a43a3dfafb6a1a7eb68936dfabdfce599dae18cb))
+
 ## [1.1.2](https://github.com/wireweave/mcp-server/compare/v1.1.2-beta.0...v1.1.2) (2026-01-19)
 
 ## [1.1.2-beta.0](https://github.com/wireweave/mcp-server/compare/v1.1.1...v1.1.2-beta.0) (2026-01-19)

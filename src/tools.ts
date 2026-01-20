@@ -7,8 +7,8 @@
  * To request changes, please open an issue at:
  * https://github.com/wireweave/mcp-server/issues
  *
- * Generated: 2026-01-20T14:26:06.287Z
- * Public tools: 29
+ * Generated: 2026-01-20T15:39:02.283Z
+ * Public tools: 30
  */
 
 import type { Tool } from '@modelcontextprotocol/sdk/types.js';
@@ -576,6 +576,32 @@ export const tools: Tool[] = [
     },
   },
   {
+    name: 'wireweave_cloud_diff_versions',
+    description: 'Compare two versions of a wireframe and return the differences. Useful for reviewing changes without loading full code.',
+    inputSchema: {
+          "type": "object",
+          "properties": {
+                "wireframeId": {
+                      "type": "string",
+                      "description": "Wireframe ID"
+                },
+                "versionA": {
+                      "type": "number",
+                      "description": "First version number to compare"
+                },
+                "versionB": {
+                      "type": "number",
+                      "description": "Second version number to compare"
+                }
+          },
+          "required": [
+                "wireframeId",
+                "versionA",
+                "versionB"
+          ]
+    },
+  },
+  {
     name: 'wireweave_account_balance',
     description: 'Check your current credit balance and subscription status',
     inputSchema: {
@@ -685,6 +711,7 @@ export const toolEndpoints: Record<string, ToolEndpoint> = {
   wireweave_cloud_restore_version: { method: 'POST', path: '/cloud/wireframes/:wireframeId/versions/:version/restore', pathParams: ['wireframeId', 'version'] },
   wireweave_cloud_create_share_link: { method: 'POST', path: '/cloud/wireframes/:wireframeId/shares', pathParams: ['wireframeId'] },
   wireweave_cloud_list_shares: { method: 'GET', path: '/cloud/wireframes/:wireframeId/shares', pathParams: ['wireframeId'] },
+  wireweave_cloud_diff_versions: { method: 'GET', path: '/cloud/wireframes/:wireframeId/diff', pathParams: ['wireframeId'] },
   wireweave_account_balance: { method: 'GET', path: '/billing/balance' },
   wireweave_account_subscription: { method: 'GET', path: '/billing/subscription' },
   wireweave_account_transactions: { method: 'GET', path: '/billing/transactions' },

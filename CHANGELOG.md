@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.1.3](https://github.com/wireweave/mcp-server/compare/v1.1.3-beta.0...v1.1.3) (2026-01-20)
+
 ## [1.1.3-beta.0](https://github.com/wireweave/mcp-server/compare/v1.1.2...v1.1.3-beta.0) (2026-01-20)
 
 ### Refactoring

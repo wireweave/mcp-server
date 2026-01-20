@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0-beta.0](https://github.com/wireweave/mcp-server/compare/v1.1.3...v1.2.0-beta.0) (2026-01-20)
+
+### Features
+
+* **tools:** add cloud diff versions tool ([735e33c](https://github.com/wireweave/mcp-server/commit/735e33c552d5288bb097e33fa5c018597d6c33fc))
+
 ## [1.1.3](https://github.com/wireweave/mcp-server/compare/v1.1.3-beta.0...v1.1.3) (2026-01-20)
 
 ## [1.1.3-beta.0](https://github.com/wireweave/mcp-server/compare/v1.1.2...v1.1.3-beta.0) (2026-01-20)

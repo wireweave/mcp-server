@@ -56,7 +56,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request): Promise<CallToo
           type: 'text',
           text: JSON.stringify({
             error: `Unknown tool: ${name}`,
-            availableTools: Object.keys(toolEndpoints),
+            availableTools: tools.map((t) => t.name),
           }, null, 2),
         },
       ],
@@ -105,7 +105,7 @@ async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
 
-  log('MCP server started');
+  log(`MCP server started with ${tools.length} tools`);
 
   if (!API_KEY) {
     log('API key not configured. Get one at https://dashboard.wireweave.org', 'warn');

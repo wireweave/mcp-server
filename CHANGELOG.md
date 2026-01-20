@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.2.0](https://github.com/wireweave/mcp-server/compare/v1.2.0-beta.0...v1.2.0) (2026-01-20)
+
 ## [1.2.0-beta.0](https://github.com/wireweave/mcp-server/compare/v1.1.3...v1.2.0-beta.0) (2026-01-20)
 
 ### Features

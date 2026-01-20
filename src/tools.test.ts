@@ -110,12 +110,7 @@ describe('toolEndpoints', () => {
       });
     });
 
-    it('render_svg should POST to /tools/render/svg', () => {
-      expect(toolEndpoints.wireweave_render_svg).toEqual({
-        method: 'POST',
-        path: '/tools/render/svg',
-      });
-    });
+    // Note: render_svg is an internal API (is_public=false), not exposed via MCP
   });
 
   describe('cloud tools endpoints', () => {

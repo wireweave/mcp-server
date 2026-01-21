@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.0-beta.0](https://github.com/wireweave/mcp-server/compare/v1.2.0...v1.3.0-beta.0) (2026-01-21)
+
+### Features
+
+* **tools:** add strict mode to validate and enhance UX rules ([6505a32](https://github.com/wireweave/mcp-server/commit/6505a327ad1553340ff8309c35ad7725d1ac21eb))
+
 ## [1.2.0](https://github.com/wireweave/mcp-server/compare/v1.2.0-beta.0...v1.2.0) (2026-01-20)
 
 ## [1.2.0-beta.0](https://github.com/wireweave/mcp-server/compare/v1.1.3...v1.2.0-beta.0) (2026-01-20)

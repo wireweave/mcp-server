@@ -7,7 +7,7 @@
  * To request changes, please open an issue at:
  * https://github.com/wireweave/mcp-server/issues
  *
- * Generated: 2026-01-20T15:39:02.283Z
+ * Generated: 2026-01-21T01:04:33.430Z
  * Public tools: 30
  */
 
@@ -33,13 +33,18 @@ export const tools: Tool[] = [
   },
   {
     name: 'wireweave_validate',
-    description: 'Validate Wireweave DSL syntax without generating output',
+    description: 'Validate Wireweave DSL syntax without generating output. Use strict mode to also check for unknown attributes.',
     inputSchema: {
           "type": "object",
           "properties": {
                 "source": {
                       "type": "string",
                       "description": "The Wireweave DSL source code to validate"
+                },
+                "strict": {
+                      "type": "boolean",
+                      "description": "Enable strict mode to also validate that only known attributes are used. Recommended for catching typos and incorrect attribute names.",
+                      "default": false
                 }
           },
           "required": [
@@ -153,7 +158,11 @@ export const tools: Tool[] = [
                                   "form",
                                   "touch-target",
                                   "consistency",
-                                  "navigation"
+                                  "navigation",
+                                  "feedback",
+                                  "content",
+                                  "data-display",
+                                  "interaction"
                             ]
                       },
                       "description": "UX rule categories to check. If not specified, all categories are checked."
@@ -171,6 +180,13 @@ export const tools: Tool[] = [
                 "maxIssues": {
                       "type": "number",
                       "description": "Maximum number of issues to return"
+                },
+                "disabledRules": {
+                      "type": "array",
+                      "items": {
+                            "type": "string"
+                      },
+                      "description": "List of rule IDs to disable (e.g., [\"a11y-input-label\", \"form-submit-button\"])"
                 }
           },
           "required": [

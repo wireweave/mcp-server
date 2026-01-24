@@ -13,7 +13,7 @@
 
 ## Overview
 
-This MCP server enables AI assistants like Claude to generate wireframes using the Wireweave DSL. It provides **32 tools** for parsing, rendering, validating, and managing wireframes.
+This MCP server enables AI assistants like Claude to generate wireframes using the Wireweave DSL. It provides **30 tools** for parsing, rendering, validating, and managing wireframes.
 
 ## Prerequisites
 
@@ -58,9 +58,9 @@ Add to your Claude Desktop config (`~/Library/Application Support/Claude/claude_
 | `WIREWEAVE_API_KEY` | Yes | Your API key from Dashboard |
 | `WIREWEAVE_API_URL` | No | API server URL (default: https://api.wireweave.org) |
 
-## Available Tools (32)
+## Available Tools (30)
 
-### Core Tools (14)
+### Core Tools (11)
 
 | Tool | Description |
 |------|-------------|
@@ -71,15 +71,12 @@ Add to your Claude Desktop config (`~/Library/Application Support/Claude/claude_
 | `wireweave_patterns` | Get common layout patterns |
 | `wireweave_examples` | Get code examples by category |
 | `wireweave_render_html` | Render DSL to HTML and CSS |
-| `wireweave_render_svg` | Render DSL to SVG format |
 | `wireweave_validate_ux` | Validate UX best practices |
 | `wireweave_ux_rules` | Get UX rule categories |
 | `wireweave_diff` | Compare two wireframe sources |
-| `wireweave_export_json` | Export to JSON format |
-| `wireweave_export_figma` | Export to Figma format |
 | `wireweave_analyze` | Analyze wireframe statistics |
 
-### Cloud Storage Tools (14)
+### Cloud Storage Tools (15)
 
 | Tool | Description |
 |------|-------------|
@@ -94,6 +91,7 @@ Add to your Claude Desktop config (`~/Library/Application Support/Claude/claude_
 | `wireweave_cloud_delete_wireframe` | Delete a wireframe |
 | `wireweave_cloud_get_versions` | Get version history |
 | `wireweave_cloud_restore_version` | Restore to a previous version |
+| `wireweave_cloud_diff_versions` | Compare two versions of a wireframe |
 | `wireweave_cloud_create_share_link` | Create a shareable link |
 | `wireweave_cloud_list_shares` | List share links |
 | `wireweave_gallery` | Browse public wireframe gallery |
@@ -120,8 +118,8 @@ Once configured, you can ask Claude:
 **Save to cloud:**
 > "Save this wireframe as 'Dashboard v2' in my project"
 
-**Export:**
-> "Export this wireframe to Figma format"
+**Share:**
+> "Create a shareable link for this wireframe"
 
 ## Architecture
 
@@ -137,7 +135,7 @@ Once configured, you can ask Claude:
 ```
 
 The MCP server is a thin client that:
-- Defines and exposes 32 tools to AI assistants
+- Defines and exposes 30 tools to AI assistants
 - Forwards tool calls to the Wireweave API Server
 - Returns results back to the AI
 
@@ -147,11 +145,11 @@ All authentication, rate limiting, and business logic runs on the API Server.
 
 | Feature | Credits |
 |---------|---------|
-| Parse, Validate, Grammar, Guide, Patterns | 1 |
-| Render HTML/SVG | 2 |
+| Parse, Validate | 1 |
+| Grammar, Guide, Patterns, Examples, UX Rules | 0 (free) |
+| Render HTML | 2 |
 | UX Validation | 3 |
 | Diff, Analyze | 2 |
-| Export JSON/Figma | 3 |
 | Cloud Save/Update | 1 |
 | Create Share Link | 5 |
 

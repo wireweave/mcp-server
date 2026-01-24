@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.0-beta.1](https://github.com/wireweave/mcp-server/compare/v1.3.0-beta.0...v1.3.0-beta.1) (2026-01-24)
+
+### Documentation
+
+* **readme:** update tool count and feature details ([ef66266](https://github.com/wireweave/mcp-server/commit/ef662665d76ec4dccc4e84edaa259c17d2d85815))
+
 ## [1.3.0-beta.0](https://github.com/wireweave/mcp-server/compare/v1.2.0...v1.3.0-beta.0) (2026-01-21)
 
 ### Features

@@ -7,7 +7,7 @@
  * To request changes, please open an issue at:
  * https://github.com/wireweave/mcp-server/issues
  *
- * Generated: 2026-01-21T01:04:33.430Z
+ * Generated: 2026-01-28T10:15:54.574Z
  * Public tools: 30
  */
 

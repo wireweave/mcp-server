@@ -7,8 +7,8 @@
  * To request changes, please open an issue at:
  * https://github.com/wireweave/mcp-server/issues
  *
- * Generated: 2026-01-28T10:15:54.574Z
- * Public tools: 30
+ * Generated: 2026-01-30T12:20:37.006Z
+ * Public tools: 29
  */
 
 import type { Tool } from '@modelcontextprotocol/sdk/types.js';
@@ -277,7 +277,7 @@ export const tools: Tool[] = [
   },
   {
     name: 'wireweave_cloud_list_projects',
-    description: 'List all your Wireweave projects. Projects help organize your wireframes.',
+    description: 'List all your Wireweave projects. Projects help organize your wireframes. WORKFLOW: Call this first before saving wireframes. If the list is empty, ask the user whether to create a new project (call wireweave_cloud_create_project) or use the default project.',
     inputSchema: {
           "type": "object",
           "properties": {
@@ -292,7 +292,7 @@ export const tools: Tool[] = [
   },
   {
     name: 'wireweave_cloud_create_project',
-    description: 'Create a new project to organize wireframes',
+    description: 'Create a new project to organize wireframes. Use this when the user wants to organize their wireframes into a specific project. The project can have a custom name, description, and color.',
     inputSchema: {
           "type": "object",
           "properties": {
@@ -339,22 +339,6 @@ export const tools: Tool[] = [
                 "isArchived": {
                       "type": "boolean",
                       "description": "Archive or unarchive the project"
-                }
-          },
-          "required": [
-                "id"
-          ]
-    },
-  },
-  {
-    name: 'wireweave_cloud_delete_project',
-    description: 'Delete a project permanently. All wireframes in the project will be moved to the default project.',
-    inputSchema: {
-          "type": "object",
-          "properties": {
-                "id": {
-                      "type": "string",
-                      "description": "Project ID to delete"
                 }
           },
           "required": [
@@ -411,7 +395,7 @@ export const tools: Tool[] = [
   },
   {
     name: 'wireweave_cloud_save_wireframe',
-    description: 'Save a new wireframe to the cloud. Costs 1 credit.',
+    description: 'Save a new wireframe to the cloud. Costs 1 credit.\n\nRECOMMENDED WORKFLOW:\n1. Call wireweave_cloud_list_projects to get available projects\n2. If projects exist: Ask user which project to save to\n3. If no projects: Ask user to (a) create a new project, or (b) save to default project\n4. Call this tool with the chosen projectId (or omit for default project)\n\nNote: If projectId is not provided, the wireframe will be saved to the user\'s default project.',
     inputSchema: {
           "type": "object",
           "properties": {
@@ -429,7 +413,7 @@ export const tools: Tool[] = [
                 },
                 "projectId": {
                       "type": "string",
-                      "description": "Project ID to save to (uses default project if not specified)"
+                      "description": "Project ID to save to. Get available projects using wireweave_cloud_list_projects first."
                 },
                 "tags": {
                       "type": "array",
@@ -717,7 +701,6 @@ export const toolEndpoints: Record<string, ToolEndpoint> = {
   wireweave_cloud_list_projects: { method: 'GET', path: '/cloud/projects' },
   wireweave_cloud_create_project: { method: 'POST', path: '/cloud/projects' },
   wireweave_cloud_update_project: { method: 'PATCH', path: '/cloud/projects/:id', pathParams: ['id'] },
-  wireweave_cloud_delete_project: { method: 'DELETE', path: '/cloud/projects/:id', pathParams: ['id'] },
   wireweave_cloud_list_wireframes: { method: 'GET', path: '/cloud/wireframes' },
   wireweave_cloud_get_wireframe: { method: 'GET', path: '/cloud/wireframes/:id', pathParams: ['id'] },
   wireweave_cloud_save_wireframe: { method: 'POST', path: '/cloud/wireframes' },

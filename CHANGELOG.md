@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0-beta.0](https://github.com/wireweave/mcp-server/compare/v1.3.1...v1.4.0-beta.0) (2026-01-30)
+
+### Features
+
+* **api:** add actionable error messages for 404 and 400 ([38b5863](https://github.com/wireweave/mcp-server/commit/38b586369b41b5376fa591cb505e30e468af3f87))
+* **tools:** improve cloud workflow guidance and remove delete_project ([f891c72](https://github.com/wireweave/mcp-server/commit/f891c725ede96367637973c3caa47e79e040f301))
+
 ## [1.3.1](https://github.com/wireweave/mcp-server/compare/v1.3.1-beta.0...v1.3.1) (2026-01-28)
 
 ## [1.3.1-beta.0](https://github.com/wireweave/mcp-server/compare/v1.3.0...v1.3.1-beta.0) (2026-01-28)

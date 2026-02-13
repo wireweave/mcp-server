@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.5.0-beta.0](https://github.com/wireweave/mcp-server/compare/v1.4.0...v1.5.0-beta.0) (2026-02-13)
+
+### Features
+
+* **mcp:** add prompts and resources support ([8e07417](https://github.com/wireweave/mcp-server/commit/8e07417ef43f4489137f61a0f3c9381818fb148e))
+
+### Documentation
+
+* **readme:** add marketplace badges ([ab50244](https://github.com/wireweave/mcp-server/commit/ab502445255bd69e812e07fd98f37bdec3267728))
+
 ## [1.4.0](https://github.com/wireweave/mcp-server/compare/v1.4.0-beta.0...v1.4.0) (2026-01-31)
 
 ## [1.4.0-beta.0](https://github.com/wireweave/mcp-server/compare/v1.3.1...v1.4.0-beta.0) (2026-01-30)

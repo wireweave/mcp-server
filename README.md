@@ -7,6 +7,10 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/@wireweave/mcp-server"><img src="https://img.shields.io/npm/v/@wireweave/mcp-server.svg" alt="npm version"></a>
   <a href="https://github.com/wireweave/mcp-server/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@wireweave/mcp-server.svg" alt="license"></a>
+  <a href="https://www.npmjs.com/package/@wireweave/mcp-server"><img src="https://img.shields.io/npm/dm/@wireweave/mcp-server.svg" alt="npm downloads"></a>
+  <a href="https://lobehub.com/mcp/wireweave-mcp-server"><img src="https://lobehub.com/badge/mcp/wireweave-mcp-server" alt="LobeHub MCP"></a>
+  <a href="https://mcpserverhub.com"><img src="https://img.shields.io/badge/MCP-Server%20Hub-blue" alt="MCP Server Hub"></a>
+  <a href="https://modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP-Compatible-green" alt="MCP Compatible"></a>
 </p>
 
 <p align="center">Model Context Protocol server for Wireweave DSL - AI-powered wireframe generation</p>

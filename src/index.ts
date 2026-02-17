@@ -206,7 +206,7 @@ async function main() {
   log(`MCP server started with ${tools.length} tools, ${prompts.length} prompts, ${resources.length} resources`);
 
   if (!API_KEY) {
-    log('API key not configured. Get one at https://dashboard.wireweave.org', 'warn');
+    log('API key not configured. Get one at https://wireweave.org', 'warn');
   }
 }
 

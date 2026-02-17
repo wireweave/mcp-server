@@ -21,7 +21,7 @@ This MCP server enables AI assistants like Claude to generate wireframes using t
 
 ## Prerequisites
 
-You need a Wireweave API key. Get one from the [Dashboard](https://dashboard.wireweave.org).
+You need a Wireweave API key. Get one from the [Dashboard](https://wireweave.org).
 
 ## Installation
 
@@ -160,7 +160,7 @@ All authentication, rate limiting, and business logic runs on the API Server.
 ## Links
 
 - [Documentation](https://docs.wireweave.org)
-- [Dashboard](https://dashboard.wireweave.org)
+- [Dashboard](https://wireweave.org)
 - [Playground](https://playground.wireweave.org)
 - [GitHub](https://github.com/wireweave/mcp-server)
 

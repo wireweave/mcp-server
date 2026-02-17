@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.1-beta.0](https://github.com/wireweave/mcp-server/compare/v1.5.0...v1.5.1-beta.0) (2026-02-17)
+
+### Documentation
+
+* **urls:** update dashboard URL to wireweave.org ([6dae7cc](https://github.com/wireweave/mcp-server/commit/6dae7cc441a76c412a5a8961620fa47bfbc88b0e))
+
 ## [1.5.0](https://github.com/wireweave/mcp-server/compare/v1.5.0-beta.0...v1.5.0) (2026-02-13)
 
 ## [1.5.0-beta.0](https://github.com/wireweave/mcp-server/compare/v1.4.0...v1.5.0-beta.0) (2026-02-13)

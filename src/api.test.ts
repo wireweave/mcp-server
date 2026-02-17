@@ -117,7 +117,7 @@ describe('buildRequest', () => {
 describe('parseErrorMessage', () => {
   it('should return specific message for 401', () => {
     const message = parseErrorMessage(401, {});
-    expect(message).toBe('Invalid API key. Get one at https://dashboard.wireweave.org');
+    expect(message).toBe('Invalid API key. Get one at https://wireweave.org');
   });
 
   it('should return specific message for 402 with custom message', () => {
@@ -314,7 +314,7 @@ describe('callApi', () => {
     });
 
     await expect(callApi(config, endpoint, undefined, mockFetch)).rejects.toThrow(
-      'Invalid API key. Get one at https://dashboard.wireweave.org'
+      'Invalid API key. Get one at https://wireweave.org'
     );
   });
 

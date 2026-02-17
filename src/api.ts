@@ -74,7 +74,7 @@ export function buildRequest(
  * Following MCP best practice: provide actionable feedback for self-correction
  */
 export function parseErrorMessage(status: number, error: { error?: string; message?: string }): string {
-  if (status === 401) return 'Invalid API key. Get one at https://dashboard.wireweave.org';
+  if (status === 401) return 'Invalid API key. Get one at https://wireweave.org';
   if (status === 402) return `Insufficient credits. ${error.message || 'Please add more credits.'}`;
   if (status === 403) return 'Access denied. Upgrade your plan for this feature.';
   if (status === 404 && error.error?.includes('project')) {

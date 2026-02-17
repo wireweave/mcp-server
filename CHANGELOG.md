@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.5.1](https://github.com/wireweave/mcp-server/compare/v1.5.1-beta.0...v1.5.1) (2026-02-17)
+
 ## [1.5.1-beta.0](https://github.com/wireweave/mcp-server/compare/v1.5.0...v1.5.1-beta.0) (2026-02-17)
 
 ### Documentation

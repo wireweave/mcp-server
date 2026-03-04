@@ -7,8 +7,8 @@
  * To request changes, please open an issue at:
  * https://github.com/wireweave/mcp-server/issues
  *
- * Generated: 2026-02-12T08:54:48.586Z
- * Public tools: 29
+ * Generated: 2026-03-04T11:10:35.125Z
+ * Public tools: 30
  */
 
 import type { Tool } from '@modelcontextprotocol/sdk/types.js';
@@ -111,6 +111,36 @@ export const tools: Tool[] = [
   {
     name: 'wireweave_render_html',
     description: 'Render Wireweave DSL to HTML and CSS',
+    inputSchema: {
+          "type": "object",
+          "properties": {
+                "source": {
+                      "type": "string",
+                      "description": "The Wireweave DSL source code to render"
+                },
+                "theme": {
+                      "type": "string",
+                      "enum": [
+                            "light",
+                            "dark"
+                      ],
+                      "description": "Color theme for rendering",
+                      "default": "light"
+                },
+                "fullDocument": {
+                      "type": "boolean",
+                      "description": "Return a complete HTML document instead of fragment",
+                      "default": false
+                }
+          },
+          "required": [
+                "source"
+          ]
+    },
+  },
+  {
+    name: 'wireweave_render_html_code',
+    description: 'Render Wireweave DSL to HTML code. Returns the HTML content directly. This is an alias for wireweave_render_html with explicit naming.',
     inputSchema: {
           "type": "object",
           "properties": {
@@ -694,6 +724,7 @@ export const toolEndpoints: Record<string, ToolEndpoint> = {
   wireweave_patterns: { method: 'GET', path: '/tools/patterns' },
   wireweave_examples: { method: 'GET', path: '/tools/examples' },
   wireweave_render_html: { method: 'POST', path: '/tools/render/html' },
+  wireweave_render_html_code: { method: 'POST', path: '/tools/render/html' },
   wireweave_validate_ux: { method: 'POST', path: '/tools/validate/ux' },
   wireweave_ux_rules: { method: 'GET', path: '/tools/ux-rules' },
   wireweave_diff: { method: 'POST', path: '/tools/diff' },

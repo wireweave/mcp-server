@@ -3,7 +3,7 @@
  *
  * ⚠️  AUTO-GENERATED FILE - DO NOT EDIT DIRECTLY
  *
- * Generated: 2026-02-12T08:54:48.961Z
+ * Generated: 2026-03-04T11:10:35.479Z
  * Public resources: 5
  */
 

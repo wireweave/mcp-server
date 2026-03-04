@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.6.0-beta.0](https://github.com/wireweave/mcp-server/compare/v1.5.1...v1.6.0-beta.0) (2026-03-04)
+
+### Features
+
+* **tools:** add local HTML file rendering tool ([40d46e1](https://github.com/wireweave/mcp-server/commit/40d46e10d619bea4834c4dcb6dacf9dd0b9cd949))
+
 ## [1.5.1](https://github.com/wireweave/mcp-server/compare/v1.5.1-beta.0...v1.5.1) (2026-02-17)
 
 ## [1.5.1-beta.0](https://github.com/wireweave/mcp-server/compare/v1.5.0...v1.5.1-beta.0) (2026-02-17)

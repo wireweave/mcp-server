@@ -20,6 +20,7 @@ import { tools, toolEndpoints } from './tools.js';
 import { prompts, promptTemplates } from './prompts.js';
 import { resources, resourceToTool } from './resources.js';
 import { callApi, type ApiConfig } from './api.js';
+import { localTools, LOCAL_TOOL_NAMES, handleLocalTool } from './local-tools.js';
 
 // API Server URL
 const API_URL = process.env.WIREWEAVE_API_URL || 'https://api.wireweave.org';
@@ -53,22 +54,30 @@ const server = new Server(
 
 // Handle tools/list request
 server.setRequestHandler(ListToolsRequestSchema, async (): Promise<ListToolsResult> => {
-  return { tools };
+  // Merge auto-generated tools with local-only tools
+  return { tools: [...tools, ...localTools] };
 });
 
 // Handle tools/call request
 server.setRequestHandler(CallToolRequestSchema, async (request): Promise<CallToolResult> => {
   const { name, arguments: args } = request.params;
 
+  // Check for local-only tools first
+  if (LOCAL_TOOL_NAMES.has(name)) {
+    return handleLocalTool(name, args as Record<string, unknown>, apiConfig);
+  }
+
+  // API proxy for auto-generated tools
   const endpoint = toolEndpoints[name];
   if (!endpoint) {
+    const allTools = [...tools, ...localTools];
     return {
       content: [
         {
           type: 'text',
           text: JSON.stringify({
             error: `Unknown tool: ${name}`,
-            availableTools: tools.map((t) => t.name),
+            availableTools: allTools.map((t) => t.name),
           }, null, 2),
         },
       ],
@@ -203,7 +212,7 @@ async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
 
-  log(`MCP server started with ${tools.length} tools, ${prompts.length} prompts, ${resources.length} resources`);
+  log(`MCP server started with ${tools.length + localTools.length} tools (${localTools.length} local), ${prompts.length} prompts, ${resources.length} resources`);
 
   if (!API_KEY) {
     log('API key not configured. Get one at https://wireweave.org', 'warn');

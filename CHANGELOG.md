@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.6.1-beta.0](https://github.com/wireweave/mcp-server/compare/v1.6.0...v1.6.1-beta.0) (2026-03-05)
+
+### Refactoring
+
+* **tools:** remove wireweave_render_html alias ([5eab1b6](https://github.com/wireweave/mcp-server/commit/5eab1b69b55702cae51518eb7128c47e9ee1f85f))
+
 ## [1.6.0](https://github.com/wireweave/mcp-server/compare/v1.6.0-beta.0...v1.6.0) (2026-03-04)
 
 ## [1.6.0-beta.0](https://github.com/wireweave/mcp-server/compare/v1.5.1...v1.6.0-beta.0) (2026-03-04)

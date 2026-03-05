@@ -107,14 +107,14 @@ async function handleRenderHtmlFile(
 
   try {
     // 1. Call API to render HTML (this charges credits)
-    const endpoint = toolEndpoints['wireweave_render_html'];
+    const endpoint = toolEndpoints['wireweave_render_html_code'];
     if (!endpoint) {
       return {
         content: [
           {
             type: 'text',
             text: JSON.stringify(
-              { error: 'wireweave_render_html endpoint not found' },
+              { error: 'wireweave_render_html_code endpoint not found' },
               null,
               2
             ),

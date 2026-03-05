@@ -103,8 +103,8 @@ describe('toolEndpoints', () => {
       });
     });
 
-    it('render_html should POST to /tools/render/html', () => {
-      expect(toolEndpoints.wireweave_render_html).toEqual({
+    it('render_html_code should POST to /tools/render/html', () => {
+      expect(toolEndpoints.wireweave_render_html_code).toEqual({
         method: 'POST',
         path: '/tools/render/html',
       });

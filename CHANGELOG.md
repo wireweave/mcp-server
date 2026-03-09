@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.6.2](https://github.com/wireweave/mcp-server/compare/v1.6.2-beta.2...v1.6.2) (2026-03-09)
+
 ## [1.6.2-beta.2](https://github.com/wireweave/mcp-server/compare/v1.6.2-beta.1...v1.6.2-beta.2) (2026-03-09)
 
 ## [1.6.2-beta.1](https://github.com/wireweave/mcp-server/compare/v1.6.2-beta.0...v1.6.2-beta.1) (2026-03-08)
